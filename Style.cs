@@ -1,13 +1,46 @@
 ﻿namespace CSLab5
 {
-    class Style(int id, string name)
+    // <summary>
+    /// Представляет стиль с идентификатором и названием.
+    /// </summary>
+    class Style
     {
-        private int _id = id;
-        private string _name = name;
+        private int _id;
+        private string _name;
 
-        public int Id { get => _id; set => _id = value; }
-        public string Name { get => _name; set => _name = value; }
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="Style"/>.
+        /// </summary>
+        /// <param name="id">Идентификатор стиля.</param>
+        /// <param name="name">Название стиля.</param>
+        public Style(int id, string name)
+        {
+            _id = id;
+            _name = name;
+        }
 
+        /// <summary>
+        /// Получает или задаёт идентификатор стиля.
+        /// </summary>
+        public int Id
+        {
+            get => _id;
+            set => _id = value;
+        }
+
+        /// <summary>
+        /// Получает или задаёт название стиля.
+        /// </summary>
+        public string Name
+        {
+            get => _name;
+            set => _name = value;
+        }
+
+        /// <summary>
+        /// Возвращает строковое представление стиля.
+        /// </summary>
+        /// <returns>Строка, содержащая идентификатор и название стиля.</returns>
         public override string ToString() => $"id = {_id}, name = {_name}";
     }
 }
