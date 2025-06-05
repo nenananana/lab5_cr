@@ -1,7 +1,8 @@
 ﻿namespace CSLab5
 {
     /// <summary>
-    /// Класс для записи протокольных сообщений в текстовый файл с отметкой времени.
+    /// Класс для записи протокольных сообщений 
+    /// в текстовый файл с отметкой времени.
     /// </summary>
     class Protocoler
     {
@@ -9,10 +10,13 @@
         private StreamWriter _streamWriter;
 
         /// <summary>
-        /// Инициализирует новый экземпляр <see cref="Protocoler"/>, открывая файл для записи.
+        /// Инициализирует новый экземпляр <see cref="Protocoler"/>, 
+        /// открывая файл для записи.
         /// </summary>
-        /// <param name="file">Путь к файлу протокола. По умолчанию "Protocol.txt".</param>
-        /// <exception cref="Exception">Выбрасывается, если файл не существует или не является .txt файлом.</exception>
+        /// <param name="file">Путь к файлу протокола. 
+        /// По умолчанию "Protocol.txt".</param>
+        /// <exception cref="Exception">Выбрасывается, 
+        /// если файл не существует или не является .txt файлом.</exception>
         public Protocoler(string file = "Protocol.txt")
         {
             if (!File.Exists(file))
